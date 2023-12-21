@@ -1,9 +1,12 @@
 import React from "react";
 
 const Chat = () => {
-  const sample = ["How to hack a website",
-  "how to learn hacking",
-  "how to think like a black hat?"]
+  const sample = [
+  "Exploring the latest trends in web app security for innovative defensive strategies.",
+  "Delving into bug bounty best practices to identify high-impact vulnerabilities.",
+  "AI's role in advancing cybersecurity: machine learning, threat modeling, and intrusion detection.",
+  "Blockchain security's latest innovations: decentralized apps, smart contracts, and emerging safeguards."
+];
   return (
     <div className="h-screen w-screen flex bg-[black]">
       <div className="w-[20%] h-screen bg-[#1b1a1a] text-white p-4">
@@ -55,15 +58,23 @@ const Chat = () => {
       <div className="w-[80%]">
       <div className="h-[80%] flex flex-col justify-center items-center text-white">
       <div className="text-4xl font-bold">Nazu's GPT</div> 
-      <div>
+      <div className="flex flex-warp justify-around max-w-[900px]">
       {
         sample.map((item,index) => {
           return (
-            <div>{item}</div>
+            <div className="text-lg font-light p-4 border border-black rounded min-w-[400px]">{item}</div>
             )
         })
       }
       </div>
+      </div>
+      <div className="h-[20%]">
+
+      <div className="flex flex-col items-center text-black justify-center h-full w-full">
+      <input tpye="text" className="w-[60px] rounded p-4" placeholder='Ask anything text-black'/>
+      <small className="text-white mt-2">AI will not replace humans, but humans with AI will replace humans without AI :)</small>
+      </div>
+
       </div>
       </div>
     </div>
